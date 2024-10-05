@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Регуляр. лаб1</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function findIp() {
+			var str = document.forms["frm"].elements["ip"].value;
+			var regexp =/\b\d\d?\.?\b|1\d\d\.?|2[0-4]\d\.?|25[0-5]\.?/g;
+			var str = str.match(regexp);
+			str = str.join('');
+			alert(str);
+		}
+	</script>
+<form id="frm">
+	<input type="text" id="ip" placeholder="IP">
+	<input type="submit" onclick="findIp()">
+</form>
+</body>
+</html>
