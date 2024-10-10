@@ -8,10 +8,10 @@
 		function findIp() {
 			var str = document.forms["frm"].elements["ip"].value;
 			
-			var regexp =/(?!\b(1?\d\d?\.?|2[0-4]\d\.?|25[0-5]\.?){4,}?\.\b)(\b1?\d\d?\.?|2[0-4]\d\.?|25[0-5]\.?){1,}\b/g;
+			var regexp =/((25[0-5]\.|2[0-4]\d\.|[0-1]?\d\d?\.){3}(25[0-5]|2[0-4]\d|[0-1]?\d\d?){1})(?!\.)/;
 			
 			var str = str.match(regexp);
-			alert(str);
+			alert(str[0]);
 		}
 	</script>
 <form id="frm">
